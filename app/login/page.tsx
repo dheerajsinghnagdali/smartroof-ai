@@ -14,7 +14,7 @@ import Image from "next/image";
 
 const Login = () => {
   return (
-    <main className="mx-auto grid max-w-[1440px] justify-center lg:grid-cols-2 lg:justify-start lg:gap-x-8">
+    <main className="mx-auto grid max-w-[1440px] justify-center lg:grid-cols-2 lg:justify-start lg:gap-x-10">
       <div className="max-w-lg p-5 lg:py-[2.5rem] lg:pl-[3.75rem] lg:pr-0">
         <Logo />
 
@@ -39,7 +39,7 @@ const Login = () => {
               <div className="relative">
                 <Message className="absolute left-2 top-1/2 -translate-y-1/2" />
                 <input
-                  className="w-full rounded-[0.5rem] border-slate-300 pl-10 text-sm placeholder:text-slate-700"
+                  className="w-full rounded-[0.5rem] border-slate-300 pl-10 text-sm placeholder:text-slate-900"
                   type="email"
                   placeholder="Pietro Schirano"
                   id="email"
@@ -57,7 +57,7 @@ const Login = () => {
               <div className="relative max-w-lg">
                 <Lock className="absolute left-2 top-1/2 -translate-y-1/2" />
                 <input
-                  className="w-full rounded-[0.5rem] border-slate-300 px-10 text-sm placeholder:text-slate-700"
+                  className="w-full rounded-[0.5rem] border-slate-300 px-10 text-sm placeholder:text-slate-900"
                   type="email"
                   placeholder="*******************"
                   id="password"
@@ -136,7 +136,7 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="hidden h-[50rem] p-5 lg:block">
+      <div className="hidden h-[62rem] p-5 lg:block">
         <div className="relative h-full overflow-hidden rounded-2xl">
           <Image
             className="object-cover"

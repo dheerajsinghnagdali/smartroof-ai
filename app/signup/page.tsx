@@ -195,7 +195,7 @@ const Signup = () => {
         </div>
       </div>
 
-      <div className="hidden h-[60rem] p-5 lg:block">
+      <div className="hidden h-[72rem] p-5 lg:block">
         <div className="relative h-full overflow-hidden rounded-2xl">
           <Image
             className="object-cover"
