@@ -7,3 +7,4 @@ export * from "./apple";
 export * from "./google";
 export * from "./facebook";
 export * from "./windows";
+export * from "./arrow-down";
