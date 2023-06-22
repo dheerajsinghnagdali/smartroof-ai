@@ -150,7 +150,7 @@ const Signup = () => {
               <Apple />
             </button>
             <button
-              className="rounded-[0.5rem] border border-gray-300 bg-[#F1511B] p-2.5"
+              className="rounded-lg border border-gray-300 bg-[#F1511B] p-2.5"
               type="button"
             >
               <Windows />
@@ -171,7 +171,7 @@ const Signup = () => {
         </div>
       </div>
 
-      <div className="hidden h-[72rem] p-5 lg:block">
+      <div className="hidden h-[72rem] p-5 pl-0 lg:block">
         <div className="relative h-full overflow-hidden rounded-2xl">
           <Image
             className="object-cover"

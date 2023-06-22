@@ -87,25 +87,25 @@ const Login = () => {
 
           <div className="mt-8 flex items-start justify-center gap-x-6">
             <button
-              className="rounded-[0.5rem] border border-gray-300 p-2.5"
+              className="rounded-lg border border-gray-300 p-2.5"
               type="button"
             >
               <Google />
             </button>
             <button
-              className="rounded-[0.5rem] border border-gray-300 bg-[#1877F2] p-2.5"
+              className="rounded-lg border border-gray-300 bg-[#1877F2] p-2.5"
               type="button"
             >
               <Facebook />
             </button>
             <button
-              className="rounded-[0.5rem] border border-gray-300 bg-black p-2.5"
+              className="rounded-lg border border-gray-300 bg-black p-2.5"
               type="button"
             >
               <Apple />
             </button>
             <button
-              className="rounded-[0.5rem] border border-gray-300 bg-[#F1511B] p-2.5"
+              className="rounded-lg border border-gray-300 bg-[#F1511B] p-2.5"
               type="button"
             >
               <Windows />
@@ -126,7 +126,7 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="hidden h-[62rem] p-5 lg:block">
+      <div className="hidden h-[62rem] p-5 pl-0 lg:block">
         <div className="relative h-full overflow-hidden rounded-2xl">
           <Image
             className="object-cover"
