@@ -10,13 +10,17 @@ import {
   Logo,
   Message,
   Windows,
-} from "../components/icons";
+} from "@/components/icons";
 import Image from "next/image";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
 
 const Signup = () => {
   return (
-    <main className="mx-auto grid max-w-[1440px] justify-center lg:grid-cols-2 lg:justify-start lg:gap-x-8">
-      <div className="max-w-lg p-5 lg:py-[2.5rem] lg:pl-[3.75rem] lg:pr-0">
+    <main className="lg:grid lg:grid-cols-2 lg:gap-x-12">
+      <div className="p-5 pb-[3.25rem] lg:py-[2.5rem] lg:pl-[3.75rem] lg:pr-12">
         <Logo />
 
         <div className="mt-6 lg:mt-[4.5rem]">
@@ -30,57 +34,45 @@ const Signup = () => {
 
         <div className="mt-8">
           <form>
-            <div>
-              <div className="grid grid-cols-2 gap-x-4">
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="mb-2 inline-block text-sm font-medium text-slate-900"
-                  >
-                    First Name
-                  </label>
-                  <div className="relative">
-                    <input
-                      className="w-full rounded-[0.5rem] border-slate-300 text-sm placeholder:text-slate-900"
-                      type="text"
-                      placeholder="Pietro Schirano"
-                      id="firstName"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="mb-2 inline-block text-sm font-medium text-slate-900"
-                  >
-                    Last Name
-                  </label>
-                  <div className="relative">
-                    <input
-                      className="w-full rounded-[0.5rem] border-slate-300 text-sm placeholder:text-slate-900"
-                      type="text"
-                      placeholder="Pietro Schirano"
-                      id="lastName"
-                    />
-                  </div>
-                </div>
+            <div className="grid grid-cols-2 gap-x-4">
+              <div>
+                <Label className="mb-2" htmlFor="firstName">
+                  First Name
+                </Label>
+                <Input
+                  className="w-full"
+                  variant="filled"
+                  type="text"
+                  placeholder="Pietro Schirano"
+                  id="firstName"
+                />
+              </div>
+              <div>
+                <Label className="mb-2" htmlFor="lastName">
+                  Last Name
+                </Label>
+                <Input
+                  className="w-full"
+                  variant="filled"
+                  type="text"
+                  placeholder="Pietro Schirano"
+                  id="lastName"
+                />
               </div>
             </div>
 
             <div className="mt-5">
-              <label
-                htmlFor="email"
-                className="mb-2 inline-block text-sm font-medium text-slate-900"
-              >
+              <Label className="mb-2" htmlFor="email">
                 Phone Number
-              </label>
+              </Label>
               <div className="relative">
                 <span className="absolute left-2 top-1/2 inline-flex -translate-y-1/2 items-center gap-x-1.5 text-slate-900">
-                  <span>US</span>
+                  US
                   <ArrowDown />
                 </span>
-                <input
-                  className="w-full rounded-[0.5rem] border-slate-300 pl-[3.625rem] text-sm placeholder:text-slate-900"
+                <Input
+                  className="w-full pl-[3.625rem]"
+                  variant="filled"
                   type="tel"
                   placeholder="+1 (555) 000-0000"
                   id="phone"
@@ -89,16 +81,13 @@ const Signup = () => {
             </div>
 
             <div className="mt-5">
-              <label
-                htmlFor="email"
-                className="mb-2 inline-block text-sm font-medium text-slate-900"
-              >
+              <Label className="mb-2" htmlFor="email">
                 Email
-              </label>
+              </Label>
               <div className="relative">
                 <Message className="absolute left-2 top-1/2 -translate-y-1/2" />
-                <input
-                  className="w-full rounded-[0.5rem] border-slate-300 pl-10 text-sm placeholder:text-slate-900"
+                <Input
+                  className="w-full pl-10"
                   type="email"
                   placeholder="Pietro Schirano"
                   id="email"
@@ -107,16 +96,13 @@ const Signup = () => {
             </div>
 
             <div className="mt-5">
-              <label
-                htmlFor="password"
-                className="mb-2 inline-block text-sm font-medium text-slate-900"
-              >
+              <Label className="mb-2 " htmlFor="password">
                 Create Password
-              </label>
-              <div className="relative max-w-lg">
+              </Label>
+              <div className="relative">
                 <Lock className="absolute left-2 top-1/2 -translate-y-1/2" />
-                <input
-                  className="w-full rounded-[0.5rem] border-slate-300 px-10 text-sm placeholder:text-slate-900"
+                <Input
+                  className="w-full px-10"
                   type="email"
                   placeholder="*******************"
                   id="password"
@@ -126,26 +112,16 @@ const Signup = () => {
             </div>
 
             <div className="mt-5 flex gap-x-3">
-              <input
-                className="h-5 w-5 rounded-[0.375rem] border-[#4D5CFD] text-[#4D5CFD] focus:ring-[#4D5CFD]"
-                type="checkbox"
-                id="terms-conditions"
-              />
-              <label
-                htmlFor="terms-conditions"
-                className="text-sm text-slate-500"
-              >
+              <Checkbox id="terms-conditions" />
+              <Label className="text-slate-500" htmlFor="terms-conditions">
                 I agree to the terms and conditions to signing up to SmartRoof.
-              </label>
+              </Label>
             </div>
 
-            <button
-              className="mt-8 inline-flex w-full items-center justify-center gap-x-3 rounded-[0.5rem] bg-black px-4 py-2.5 font-semibold text-white"
-              type="submit"
-            >
-              <Bag />
-              <span>Sign Up</span>
-            </button>
+            <Button className="mt-8 w-full font-semibold" type="submit">
+              <Bag className="mr-3" />
+              Sign Up
+            </Button>
           </form>
 
           <div className="mt-8 flex items-center gap-x-2.5 lg:mt-[2.625rem] lg:gap-x-3">
@@ -156,19 +132,19 @@ const Signup = () => {
 
           <div className="mt-8 flex items-start justify-center gap-x-6">
             <button
-              className="rounded-[0.5rem] border border-gray-300 p-2.5"
+              className="rounded-lg border border-gray-300 p-2.5"
               type="button"
             >
               <Google />
             </button>
             <button
-              className="rounded-[0.5rem] border border-gray-300 bg-[#1877F2] p-2.5"
+              className="rounded-lg border border-gray-300 bg-[#1877F2] p-2.5"
               type="button"
             >
               <Facebook />
             </button>
             <button
-              className="rounded-[0.5rem] border border-gray-300 bg-black p-2.5"
+              className="rounded-lg border border-gray-300 bg-black p-2.5"
               type="button"
             >
               <Apple />

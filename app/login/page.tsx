@@ -8,14 +8,18 @@ import {
   Message,
   Windows,
   Facebook,
-} from "../components/icons";
+} from "@/components/icons";
 import Link from "next/link";
 import Image from "next/image";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
 
 const Login = () => {
   return (
-    <main className="mx-auto grid max-w-[1440px] justify-center lg:grid-cols-2 lg:justify-start lg:gap-x-10">
-      <div className="max-w-lg p-5 lg:py-[2.5rem] lg:pl-[3.75rem] lg:pr-0">
+    <main className="lg:grid lg:grid-cols-2 lg:gap-x-12">
+      <div className="p-5 pb-[3.25rem] lg:py-[2.5rem] lg:pl-[3.75rem] lg:pr-12">
         <Logo />
 
         <div className="mt-6 lg:mt-[4.5rem]">
@@ -30,16 +34,14 @@ const Login = () => {
         <div className="mt-8">
           <form>
             <div>
-              <label
-                htmlFor="email"
-                className="mb-2 inline-block text-sm font-medium text-slate-900"
-              >
+              <Label className="mb-2" htmlFor="email">
                 Email
-              </label>
+              </Label>
               <div className="relative">
                 <Message className="absolute left-2 top-1/2 -translate-y-1/2" />
-                <input
-                  className="w-full rounded-[0.5rem] border-slate-300 pl-10 text-sm placeholder:text-slate-900"
+                <Input
+                  className="w-full pl-10"
+                  variant="filled"
                   type="email"
                   placeholder="Pietro Schirano"
                   id="email"
@@ -48,16 +50,14 @@ const Login = () => {
             </div>
 
             <div className="mt-5">
-              <label
-                htmlFor="password"
-                className="mb-2 inline-block text-sm font-medium text-slate-900"
-              >
+              <Label htmlFor="password" className="mb-2">
                 Create Password
-              </label>
-              <div className="relative max-w-lg">
+              </Label>
+              <div className="relative">
                 <Lock className="absolute left-2 top-1/2 -translate-y-1/2" />
-                <input
-                  className="w-full rounded-[0.5rem] border-slate-300 px-10 text-sm placeholder:text-slate-900"
+                <Input
+                  className="w-full px-10 text-sm"
+                  variant="filled"
                   type="email"
                   placeholder="*******************"
                   id="password"
@@ -67,26 +67,16 @@ const Login = () => {
             </div>
 
             <div className="mt-5 flex gap-x-3">
-              <input
-                className="h-5 w-5 rounded-[0.375rem] border-[#4D5CFD] text-[#4D5CFD] focus:ring-[#4D5CFD]"
-                type="checkbox"
-                id="terms-conditions"
-              />
-              <label
-                htmlFor="terms-conditions"
-                className="text-sm text-slate-500"
-              >
+              <Checkbox id="terms-conditions" />
+              <Label className="text-slate-500" htmlFor="terms-conditions">
                 I agree to the terms and conditions to signing up to SmartRoof.
-              </label>
+              </Label>
             </div>
 
-            <button
-              className="mt-8 inline-flex w-full items-center justify-center gap-x-3 rounded-[0.5rem] bg-black px-4 py-2.5 font-semibold text-white"
-              type="submit"
-            >
-              <Bag />
+            <Button className="mt-8 w-full" type="submit">
+              <Bag className="mr-3" />
               <span>Sign in with Email</span>
-            </button>
+            </Button>
           </form>
 
           <div className="mt-8 flex items-center gap-x-2.5 lg:mt-[2.625rem] lg:gap-x-3">
